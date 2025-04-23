@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "9bf90f50-2789-4b60-b1aa-c16837925b70",
+		"name": "DDD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10894690"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"admin@localhost\",\r\n    \"password\" : \"Admin01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7190/api/Identity/Login/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7190",
+					"path": [
+						"api",
+						"Identity",
+						"Login",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxYWE2NzAyMy03YzZiLTQ4YTctOTVlZi03MDI3MTNhMmYwZTEiLCJ1bmlxdWVfbmFtZSI6ImFkbWluQGxvY2FsaG9zdCIsInJvbGUiOiJBZG1pbmlzdHJhdG9yIiwibmJmIjoxNzQ1NDM0MDM0LCJleHAiOjE3NDU0MzQzMzQsImlhdCI6MTc0NTQzNDAzNCwiaXNzIjoiTG9jYWwgU2VydmVyIiwiYXVkIjoiTG9jYWwgQXVkaWVuY2UifQ.lGYEsW-Tr1181scYbhVYLjnSMHWwSV0JWYhyAncjhOVjD2HYE0920aieRh5AWZegbbCT_JKNuNHOsMH3495vZy7JRcjCQ6FmQ3BsSDHqnn7Jd3H6ywmBU5JNaLInz3rVA335PPS7Ol_quwS0rNpJhfcJi62e7Ge6JuxEg3PoFRC4I9aEFpySyy3BpyFBj42dOqUP97rJfsUHpt1IcDWB6W04kRMM4sg7kJxJNtjnrFAamKXQt4_Q71KKy0lLlvU94aLVTMwvqmomXTkvmdiKpA_AKGPC-Db032V-kjcilw22wXS7Pc_gATDad7s6gNpFNnp0zq2XstgtY9eUsbuvjg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"currentPassword\": \"Admin01\",\r\n  \"newPassword\": \"Secret.1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7190/api/Identity/ChangePassword/ChangePassword",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7190",
+					"path": [
+						"api",
+						"Identity",
+						"ChangePassword",
+						"ChangePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Public Key",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
