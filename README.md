@@ -29,3 +29,4 @@ This project provides a secure, scalable approach to JWT authentication with aut
 - **API Authentication**: Public key validation for services exposed to external consumers.
 - **Compliance and Security**: Ensures periodic key rotation for high-security systems.
 
+Project base from: https://github.com/evgenirusev/.NET-Domain-Driven-Design-Template
