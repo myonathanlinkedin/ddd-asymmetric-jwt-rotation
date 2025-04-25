@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\" : \"admin@localhost\",\r\n    \"password\" : \"Admin01\"\r\n}",
+					"raw": "{\r\n    \"email\" : \"test@test.com\",\r\n    \"password\" : \"654321\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -45,7 +45,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxYWE2NzAyMy03YzZiLTQ4YTctOTVlZi03MDI3MTNhMmYwZTEiLCJ1bmlxdWVfbmFtZSI6ImFkbWluQGxvY2FsaG9zdCIsInJvbGUiOiJBZG1pbmlzdHJhdG9yIiwibmJmIjoxNzQ1NDM0MDM0LCJleHAiOjE3NDU0MzQzMzQsImlhdCI6MTc0NTQzNDAzNCwiaXNzIjoiTG9jYWwgU2VydmVyIiwiYXVkIjoiTG9jYWwgQXVkaWVuY2UifQ.lGYEsW-Tr1181scYbhVYLjnSMHWwSV0JWYhyAncjhOVjD2HYE0920aieRh5AWZegbbCT_JKNuNHOsMH3495vZy7JRcjCQ6FmQ3BsSDHqnn7Jd3H6ywmBU5JNaLInz3rVA335PPS7Ol_quwS0rNpJhfcJi62e7Ge6JuxEg3PoFRC4I9aEFpySyy3BpyFBj42dOqUP97rJfsUHpt1IcDWB6W04kRMM4sg7kJxJNtjnrFAamKXQt4_Q71KKy0lLlvU94aLVTMwvqmomXTkvmdiKpA_AKGPC-Db032V-kjcilw22wXS7Pc_gATDad7s6gNpFNnp0zq2XstgtY9eUsbuvjg",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI2NTYxZWM1NC1mZWQ3LTRjZjgtYTVhNi1hYWE4YWQ3OTRlZDMiLCJ1bmlxdWVfbmFtZSI6InRlc3RAdGVzdC5jb20iLCJuYmYiOjE3NDU2MTUwMDksImV4cCI6MTc0NTYxNTMwOSwiaWF0IjoxNzQ1NjE1MDA5LCJpc3MiOiJMb2NhbCBTZXJ2ZXIiLCJhdWQiOiJMb2NhbCBBdWRpZW5jZSJ9.BJXCeK5W8KcBYxoo78hXZrGgUhG5kn4flf3GxFSjkNzc2zC09dqleNsjnQYtMNhHpWwZh4aK5xFbM1_CB3KyBCRCGIJgOU9aR4_wZq_3-rUBmAw19ioJPtsMIYaKbCchTx2GWBc0YDNalpToufJUqGBKN2CUYe3kiO29mOsvsQxmMEfgukKfbAWlWAPEpM6T1k_ojgj4G1PSJx7QBBBv2uFpXA1tPZ96Qu0HvJaONto2L5bsfK-nS0yJmAAbw1coZfMN4MtCuyXazi8fMVxtxuC1lqjzePBoh0VVRtZhA72VzWKzQx5fAcr3mshoDMafXxvFoJMOaqRq0gBzMgmerA",
 							"type": "string"
 						}
 					]
@@ -54,7 +54,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"currentPassword\": \"Admin01\",\r\n  \"newPassword\": \"Secret.1\"\r\n}",
+					"raw": "{\r\n  \"currentPassword\": \"Admin01\",\r\n  \"newPassword\": \"Test01\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -82,7 +82,52 @@
 			"name": "Get Public Key",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7190/api/Jwks/GetPublicKey/GetPublicKey",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7190",
+					"path": [
+						"api",
+						"Jwks",
+						"GetPublicKey",
+						"GetPublicKey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\" : \"test@test.com\",\r\n  \"password\": \"123456\",\r\n  \"confirmPassword\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7190/api/identity/Register/Register",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7190",
+					"path": [
+						"api",
+						"identity",
+						"Register",
+						"Register"
+					]
+				}
 			},
 			"response": []
 		}
